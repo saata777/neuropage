@@ -1,0 +1,1094 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1484px;
+  height: 100vh;
+  font-family: "roboto";
+  font-stretch: normal;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px 0px 0px 50px;
+}
+
+.pirveli {
+  width: 100%;
+  height: 900px;
+  background-color: #626262;
+  position: relative;
+}
+
+.open-panel {
+  width: 80px;
+  height: 900px;
+  justify-content: space-between;
+  padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px 40px 0px;
+}
+
+.tavdapirvelih1 {
+  color: white;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.neuro {
+  color: white;
+  position: fixed;
+  z-index: 7;
+  top: 52px;
+  left: 160px;
+}
+
+.mcocavip {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  position: fixed;
+  top: 49px;
+  left: 903px;
+  z-index: 7;
+  color: white;
+}
+
+/* Toggle კონტეინერი, რომლითაც პოზიციას აკონტროლებ */
+.toggle-switch {
+  position: absolute; /* ან relative, fixed, sticky */
+  top: 50px;
+  left: 100px;
+}
+
+/* Checkbox-ის დამალვა */
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+/* Toggle ღილაკის ჩარჩო */
+.switch {
+  display: inline-block;
+  width: 60px; /* სიგანე */
+  height: 30px; /* სიმაღლე */
+  border: 2px solid #ffffff; /* გამორთული მდგომარეობა: შავი ჩარჩო */
+  border-radius: 30px; /* მომრგვალებული ჩარჩო */
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+/* შიდა მოძრავი წრის სტილი */
+.switch::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff; /* გამორთული მდგომარეობა: შავი წრე */
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: background-color 0.3s, left 0.3s;
+}
+
+/* აქტიური (Checked) მდგომარეობა */
+input[type="checkbox"]:checked + .switch {
+  border-color: #000000; /* აქტიური: თეთრი ჩარჩო */
+}
+
+input[type="checkbox"]:checked + .switch::before {
+  background-color: #000000; /* აქტიური: თეთრი წრე */
+  left: 34px; /* წრის გადაადგილება მარჯვნივ */
+}
+
+.toggle-switch {
+  position: fixed;
+  top: 44px;
+  left: 1170px;
+  z-index: 7;
+}
+
+.mcocavip2 {
+  position: fixed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  color: #ffffff8e;
+  top: 49px;
+  left: 1052px;
+  z-index: 7;
+}
+
+.tavdapirvelih1-2 {
+  color: rgba(229, 229, 72, 1);
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 346px;
+  left: 300px;
+}
+
+.gold {
+  width: 850px;
+  height: 3px;
+  background-color: rgba(229, 229, 72, 1);
+  position: absolute;
+  left: 150px;
+  top: 394px;
+}
+
+.tavdapirvelih1-1 {
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 250px;
+  left: 150px;
+}
+
+.tavdapirvelih1-3 {
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 442px;
+  left: 300px;
+}
+
+.tavdapirvelip1-1 {
+  color: white;
+  position: absolute;
+  top: 578px;
+  left: 300px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.tavdapirvelibutton1 {
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  top: 553px;
+  left: 630px;
+  color: black;
+  background-color: rgba(229, 229, 72, 1);
+  border: none;
+  border-radius: 100%;
+  font-family: "roboto";
+}
+
+.tavdapirvelivideo {
+  position: absolute;
+  left: 1070px;
+  top: 636px;
+}
+
+.tavdapirvelivideop {
+  position: absolute;
+  left: 1070px;
+  top: 802px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+}
+
+.tavdapirvelimqrali {
+  color: #6666660a;
+  font-family: "roboto";
+  font-size: 224px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #ffffff10;
+  position: absolute;
+  top: 642px;
+  left: 843px;
+  width: 590px;
+  overflow: hidden;
+}
+
+.pirvelivideoszedaptext {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  top: 607px;
+  left: 1331px;
+  position: absolute;
+  color: white;
+}
+
+#meore {
+  width: 100%;
+  height: 900px;
+  background-color: black;
+  position: relative;
+}
+
+.meoreh1-1 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #666;
+  color: black;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 160px;
+  left: 150px;
+}
+
+.SOLUTIONS {
+  color: rgba(229, 229, 72, 1);
+  -webkit-text-stroke-width: 0px;
+  width: 536px;
+  position: absolute;
+  left: 340px;
+}
+
+.gold2 {
+  width: 530px;
+  height: 3px;
+  position: absolute;
+  top: 292px;
+  left: 467px;
+  background-color: rgba(229, 229, 72, 1);
+}
+
+.FOR {
+  position: absolute;
+  left: 850px;
+}
+
+.meorebutton2 {
+  width: 109px;
+  height: 48px;
+  position: absolute;
+  top: 560px;
+  left: 150px;
+  background-color: black;
+  border: solid white;
+  border-radius: 80px;
+  color: white;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.192px;
+  text-transform: uppercase;
+  font-family: "roboto";
+}
+
+.mesame {
+  width: 100%;
+  height: 1925px;
+  position: absolute;
+  top: 1568px;
+  background-color: black;
+}
+
+.mesameh1-1 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #666;
+  color: black;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 80px;
+  left: 150px;
+}
+
+.mesameh1-2 {
+  position: absolute;
+  left: 309px;
+  top: 144px;
+  color: rgba(229, 229, 72, 1);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gold3 {
+  width: 490px;
+  top: 180px;
+  position: absolute;
+  left: 150px;
+  background-color: rgba(229, 229, 72, 1);
+  height: 2px;
+}
+
+.card {
+  width: 550px;
+  height: 408px;
+  background-color: #666666;
+  clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+}
+
+.cardebi {
+  position: absolute;
+  top: 321px;
+  left: 150px;
+  color: white;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.mesamecardzeda {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.mesamecardqveda {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.mesamepirvelipatarawarwerebi {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mesamedidiwarwerebi {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 0px 0px 39px;
+}
+
+.warweracardebi {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cardh3 {
+  color: var(--NeuYellow, #e5e548);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.cardp1 {
+  color: var(--White, #fff);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.cardp2 {
+  color: var(--White, #fff);
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+  opacity: 0.4;
+}
+
+.cardp3 {
+  color: var(--White, #fff);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+
+.oqroswertili {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(229, 229, 72, 1);
+  border-radius: 100%;
+  align-self: center;
+}
+
+.oqroswertili0 {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.didicardisricxvi {
+  color: #6666660a;
+  font-family: "roboto";
+  font-size: 224px;
+  position: absolute;
+  font-size: 168px;
+  top: 220px;
+  transform: rotate(-90deg);
+  font-weight: 700;
+  line-height: 120px;
+
+  -webkit-text-stroke: 2px #ffffffe2;
+}
+.didicardisricxvi2 {
+  color: #6666660a;
+  font-family: "roboto";
+  font-size: 224px;
+  position: absolute;
+  font-size: 168px;
+  top: 220px;
+  transform: rotate(-90deg);
+  font-weight: 700;
+  line-height: 120px;
+
+  -webkit-text-stroke: 2px #ffffffe2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.didicardisricxvi3 {
+  color: #6666660a;
+  font-family: "roboto";
+  font-size: 224px;
+  position: absolute;
+  font-size: 168px;
+  top: 970px;
+
+  transform: rotate(-90deg);
+  font-weight: 700;
+  line-height: 120px;
+
+  -webkit-text-stroke: 2px #ffffffe2;
+}
+.didicardisricxvi4 {
+  color: #6666660a;
+  font-family: "roboto";
+  font-size: 224px;
+  position: absolute;
+  font-size: 168px;
+  top: 970px;
+
+  transform: rotate(-90deg);
+  font-weight: 700;
+  line-height: 120px;
+
+  -webkit-text-stroke: 2px #ffffffe2;
+}
+
+.mesame02yviteliveli {
+  width: 422px;
+  height: 128px;
+  background: #e5e548;
+  position: absolute;
+  top: 280px;
+}
+
+.mesamemeorekvadrati {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  background: #e5e548a3;
+  top: 280px;
+  left: 1012px;
+}
+
+.mesame02button1 {
+  color: white;
+  background-color: black;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  font-size: 27px;
+  font-family: "roboto";
+}
+
+.tavdapirvelibutton2 {
+  background: none;
+  border: none;
+  font-size: 40px;
+  position: absolute;
+  top: 796px;
+  left: 688px;
+  color: #e5e548;
+  transform: rotate(90deg);
+  font-family: "roboto";
+  scroll-behavior: smooth;
+}
+
+.mesamebuttoni1 {
+  width: 121px;
+  height: 48px;
+  border: solid white;
+  border-radius: 80px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 1761px;
+  left: 150px;
+  font-family: "roboto";
+}
+
+.mesamewertili1 {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(229, 229, 72, 1);
+  position: absolute;
+  top: 1761px;
+  left: 1320px;
+  border-radius: 100%;
+}
+.mesamewertili2 {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 1761px;
+  left: 1336px;
+  border-radius: 100%;
+  border: solid 1px rgba(229, 229, 72, 1);
+}
+.mesamewertili3 {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  top: 1761px;
+  left: 1352px;
+  border-radius: 100%;
+  border: solid 1px rgba(229, 229, 72, 1);
+}
+
+.meotxe {
+  width: 100%;
+  height: 932px;
+  background-color: black;
+  position: absolute;
+  top: 3492px;
+}
+
+.meotxeh1-1 {
+  -webkit-text-stroke: 2px #ffffffa3;
+
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 80px;
+  left: 150px;
+}
+
+.meotxeh1-2 {
+  color: rgba(229, 229, 72, 1);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 160%;
+  position: absolute;
+  top: 144px;
+  left: 309px;
+}
+
+.gold4 {
+  width: 528px;
+  top: 194px;
+  position: absolute;
+  left: 150px;
+  background-color: rgba(229, 229, 72, 1);
+  height: 2px;
+}
+
+.studiopage {
+  width: 720px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 280px;
+  left: 150px;
+  gap: 40px;
+}
+
+.meotxewarwerebidaxazi {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pitem {
+  color: #ffffff8a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+.hitem {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 4px;
+  height: 64px;
+}
+
+.meotxemqralidamuqigamyofi {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.meotxexazebi {
+  background-color: rgba(48, 41, 0, 0.707);
+  width: 100%;
+  height: 2px;
+}
+
+.meotxewarwerebih1-4 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 4px;
+  height: 64px;
+}
+
+.meotxecharcho {
+  width: 290px;
+  height: 392px;
+  background-color: #666;
+  clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+  position: absolute;
+  top: 408px;
+  left: 1070px;
+}
+
+.meotxecharchosbatoni {
+  width: 108px;
+  height: 108px;
+  background-color: rgba(229, 229, 72, 1);
+
+  color: rgba(0, 0, 0, 0.748);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.192px;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  top: 142px;
+  left: 91px;
+}
+
+.meotxewarwerebidaxazi:hover,
+.meotxewarwerebidaxazi:hover .hitem {
+  color: #e5e548;
+}
+
+.meotxewarwerebidaxazi:hover .meotxexazebi {
+  background-color: #e5e548;
+}
+.mexute {
+  width: 100%;
+  height: 932px;
+  background-color: black;
+  position: absolute;
+  top: 4406px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mexutecardidawarwerebi {
+  width: 1171px;
+  height: 488px;
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+  padding: 0px 0px 80px 0px;
+  position: absolute;
+  top: 280px;
+}
+
+.mexutewarwerebi {
+  color: white;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mexutecardi {
+  width: 440px;
+  height: 408px;
+  background-color: #666;
+  clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+  position: relative;
+}
+
+.mexutewarwerebih1-2 {
+  color: rgba(229, 229, 72, 1);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 4px;
+}
+
+.mexutep1 {
+  color: rgba(255, 255, 255, 0.816);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.mexutep2 {
+  color: rgba(255, 255, 255, 0.351);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.mexute01 {
+  transform: rotate(-90deg);
+  color: #666;
+  -webkit-text-stroke: 2px #ffffffbc;
+  font-size: 168px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120px;
+  position: absolute;
+  top: 220px;
+  left: 41px;
+}
+
+.mexuteh1-1 {
+  -webkit-text-stroke: 2px #ffffffa3;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+
+  position: absolute;
+  top: 80px;
+}
+
+.mexuteh1-2 {
+  color: rgba(229, 229, 72, 1);
+  font-size: 64px;
+  font-weight: 700;
+  position: absolute;
+  top: 137px;
+  text-align: end;
+  left: 164px;
+}
+.mexutezedawarwerebi {
+  width: 550px;
+  height: 280px;
+  padding: 80px 0px 80px 0px;
+  left: 150px;
+  top: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.gold5 {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(229, 229, 72, 1);
+  position: absolute;
+  top: 176px;
+}
+
+.mexutebuttoni {
+  font-family: "roboto";
+  position: absolute;
+  left: 150px;
+  top: 768px;
+  background-color: white;
+  width: 128px;
+  height: 48px;
+  border-radius: 80px;
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.192px;
+  border: none;
+}
+
+.mexutewertili1 {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(229, 229, 72, 1);
+  position: absolute;
+  top: 788px;
+  left: 1320px;
+  border-radius: 100%;
+}
+.mexutewertili2 {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 788px;
+  left: 1336px;
+  border-radius: 100%;
+  border: solid 1px rgba(229, 229, 72, 1);
+}
+.mexutewertili3 {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  top: 788px;
+  left: 1352px;
+  border-radius: 100%;
+  border: solid 1px rgba(229, 229, 72, 1);
+}
+
+.meeqvse {
+  height: 778px;
+  width: 1440px;
+  background-color: #e5e548;
+  position: absolute;
+  top: 5338px;
+}
+
+.meeqvseh1-1 {
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  -webkit-text-stroke: 2px #000000;
+  color: #e5e548;
+}
+
+.meeqvsespan {
+  color: black;
+  position: absolute;
+  left: 491px;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  position: absolute;
+  top: 256px;
+}
+.shavixazi {
+  width: 480px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 300px;
+  left: 456px;
+}
+
+.meeqvsebatoni {
+  width: 108px;
+  height: 108px;
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  left: 1142px;
+  top: 158px;
+  font-family: "roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.192px;
+}
+
+.meeqvseqvedavelimarjvena {
+  display: flex;
+  flex-direction: row;
+  width: 877px;
+  height: 170px;
+  gap: 128px;
+}
+
+.meeqvseqvedaveli {
+  width: 1280px;
+  height: 250px;
+  padding: 0px 0px 80px 0px;
+  position: absolute;
+  top: 464px;
+  left: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 320px;
+}
+
+.meeqvseertnairip2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 240%;
+}
+
+.meeqvseertnairip3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 240%;
+}
+
+.meeqvseertnairip {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.881);
+  font-family: "roboto";
+}
+
+.meeqvseertnairih3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.meeqvseertnairiqveda {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.meeqvsebolop {
+  position: absolute;
+  top: 714px;
+  left: 80px;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 0px 40px 0px;
+  gap: 40px;
+}
+
+.meeqvsepbolo1 {
+  width: 110px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+.meeqvsepbolo2 {
+  width: 110px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+.meeqvsepbolo3 {
+  width: auto 150px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+
+.logon {
+  color: gold;
+  font-size: 27px;
+  font-weight: 200;
+}
+
+.logoswre {
+  width: 40px;
+  height: 40px;
+  border: solid gold;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+#open-panelbtn {
+  background-color: rgba(46, 139, 86, 0);
+  border: none;
+  color: white;
+  font-weight: 50;
+  font-size: 40px;
+  align-self: center;
+}
+
+.qvemop {
+  width: 100%;
+  height: 78px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "roboto";
+  gap: 8px;
+}
+
+.qvemopmuqi {
+  color: #fff;
+  text-align: center;
+  font-family: Supreme;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-family: "roboto";
+}
+
+.qvemopmqrali {
+  color: #666;
+  text-align: center;
+  font-family: Supreme;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  font-family: roboto;
+}
